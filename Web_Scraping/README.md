@@ -1,0 +1,21 @@
+# R
+#### Web Scraping
+- [**WebScraping**](http://dept.stat.lsa.umich.edu/~jerrick/courses/stat701/notes/webscrape.html)
+  - Manual scraping: Hockey; Salary example
+    - obtain the webpage (readLines)
+    - Extract the relevant info (package stringr)
+      - str_which: find relevant strings
+      - str_detect: drop irrelevant strings
+      - str_replace: remove the common text
+      - str_split: split into proper variables
+  - rvest: automates scraping process
+    - read_html: grab the website
+    - html_nodes(, "table")\[#]: extract tables, if mutiple tables, subscript it.
+    - html_table: convert to a list, use [\[1]] to turn it to a data frame
+  - where rvest fails
+  - Data Spread Over Multiple pages: mannipulate html string to get to consecutive htmls
+  - APIs and JSON:
+    - [public apis](https://github.com/toddmotto/public-apis)
+    - Json: A lot of formal APIs return data in a format known as JSON
+    - package [jsonlite](https://cran.r-project.org/web/packages/jsonlite/index.html): parse json file
+    - currency conversion example 
